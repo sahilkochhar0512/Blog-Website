@@ -1,0 +1,25 @@
+<%- include("partials/header"); %>
+
+<h1>Home</h1>
+<p> <%= startingContent %> </p>
+
+<% blogContent.forEach(function(blog){ %>
+    <h1> <%= blog.title %></h1>
+    <p>
+    <%= blog.message.substring(0,100)+"..."%>
+    <a href="/posts/<%=blog._id%>">Read More</a>
+    </p>
+    <%  }); %>
+
+
+
+<%- include("partials/footer"); %>
+
+<%/* %>
+  This is a comment
+  The above for loop is an alternative to the below for loop
+
+ <% for(var i=0;i< blogContent.length ;i++){ %>
+     <% console.log(blogContent[i].title);}; %>
+
+<%*/ %>
